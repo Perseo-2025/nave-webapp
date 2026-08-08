@@ -14,7 +14,7 @@ import {
 
 const NAV_LINKS = [
   { label: 'Máquinas', href: '#maquinas' },
-  { label: 'Productos', href: '#productos' },
+  { label: 'Productos', href: '/productos' },
   { label: 'Galería', href: '#galeria' },
   { label: 'Franquicia', href: '#franquicia' },
   { label: 'Nosotros', href: '#nosotros' },

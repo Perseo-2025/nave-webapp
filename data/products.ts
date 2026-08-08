@@ -1,0 +1,293 @@
+export type ProductCategoryId =
+  | 'bebidas'
+  | 'snacks-salados'
+  | 'dulces-galletas'
+  | 'cafe-infusiones';
+
+export interface ProductCategory {
+  id: ProductCategoryId;
+  label: string;
+  description: string;
+}
+
+export interface Product {
+  id: string;
+  name: string;
+  brand: string;
+  category: ProductCategoryId;
+  presentation: string;
+  price: number;
+  originalPrice?: number;
+  image: string;
+  description: string;
+  popular?: boolean;
+}
+
+export const PRODUCT_CATEGORIES: ProductCategory[] = [
+  {
+    id: 'bebidas',
+    label: 'Bebidas',
+    description: 'Gaseosas, aguas, isotónicas y energizantes',
+  },
+  {
+    id: 'snacks-salados',
+    label: 'Snacks Salados',
+    description: 'Papas, piqueos y snacks crocantes',
+  },
+  {
+    id: 'dulces-galletas',
+    label: 'Dulces & Galletas',
+    description: 'Chocolates, galletas y golosinas',
+  },
+  {
+    id: 'cafe-infusiones',
+    label: 'Café & Infusiones',
+    description: 'Café instantáneo y bebidas calientes',
+  },
+];
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'coca-cola-500',
+    name: 'Coca-Cola',
+    brand: 'Coca-Cola',
+    category: 'bebidas',
+    presentation: '500 ml',
+    price: 4.5,
+    image: '/products/coca-cola-500.jpg',
+    description: 'La clásica gaseosa de cola, ideal bien fría.',
+    popular: true,
+  },
+  {
+    id: 'inca-kola-500',
+    name: 'Inca Kola',
+    brand: 'Inca Kola',
+    category: 'bebidas',
+    presentation: '500 ml',
+    price: 4.5,
+    image: '/products/inca-kola-500.jpg',
+    description: 'El sabor de Perú. La gaseosa dorada de siempre.',
+    popular: true,
+  },
+  {
+    id: 'sprite-500',
+    name: 'Sprite',
+    brand: 'Sprite',
+    category: 'bebidas',
+    presentation: '500 ml',
+    price: 4.0,
+    image: '/products/sprite-500.jpg',
+    description: 'Refresco de lima-limón, ligero y refrescante.',
+  },
+  {
+    id: 'fanta-naranja-500',
+    name: 'Fanta Naranja',
+    brand: 'Fanta',
+    category: 'bebidas',
+    presentation: '500 ml',
+    price: 4.0,
+    image: '/products/fanta-naranja-500.png',
+    description: 'Gaseosa con sabor a naranja, dulce y frutal.',
+  },
+  {
+    id: 'pepsi-500',
+    name: 'Pepsi',
+    brand: 'Pepsi',
+    category: 'bebidas',
+    presentation: '500 ml',
+    price: 3.5,
+    originalPrice: 4.5,
+    image: '/products/pepsi-500.png',
+    description: 'Gaseosa de cola con el sabor Pepsi de siempre.',
+  },
+  {
+    id: 'kola-real-500',
+    name: 'Kola Real',
+    brand: 'Big Cola',
+    category: 'bebidas',
+    presentation: '500 ml',
+    price: 3.0,
+    originalPrice: 3.8,
+    image: '/products/kola-real-500.png',
+    description: 'La gaseosa peruana de siempre, buen rendimiento.',
+  },
+  {
+    id: 'chicha-morada-400',
+    name: 'Chicha Morada',
+    brand: 'Naveguz Selección',
+    category: 'bebidas',
+    presentation: '400 ml',
+    price: 3.5,
+    image: '/products/chicha-morada-400.jpg',
+    description: 'Bebida tradicional peruana a base de maíz morado.',
+    popular: true,
+  },
+  {
+    id: 'agua-sin-gas-625',
+    name: 'Agua de Mesa Sin Gas',
+    brand: 'San Luis',
+    category: 'bebidas',
+    presentation: '625 ml',
+    price: 2.5,
+    image: '/products/agua-sin-gas-625.jpg',
+    description: 'Agua de mesa embotellada, pureza garantizada.',
+  },
+  {
+    id: 'gatorade-500',
+    name: 'Gatorade Isotónica',
+    brand: 'Gatorade',
+    category: 'bebidas',
+    presentation: '500 ml',
+    price: 6.5,
+    image: '/products/gatorade-500.png',
+    description: 'Bebida rehidratante para reponer energía y minerales.',
+  },
+  {
+    id: 'powerade-500',
+    name: 'Powerade',
+    brand: 'Powerade',
+    category: 'bebidas',
+    presentation: '500 ml',
+    price: 6.0,
+    originalPrice: 7.5,
+    image: '/products/powerade-500.png',
+    description: 'Bebida isotónica ideal para después del ejercicio.',
+  },
+  {
+    id: 'red-bull-250',
+    name: 'Red Bull',
+    brand: 'Red Bull',
+    category: 'bebidas',
+    presentation: '250 ml',
+    price: 8.5,
+    image: '/products/red-bull-250.png',
+    description: 'Bebida energizante clásica, te da alas.',
+  },
+  {
+    id: 'monster-473',
+    name: 'Monster Energy',
+    brand: 'Monster',
+    category: 'bebidas',
+    presentation: '473 ml',
+    price: 9.5,
+    originalPrice: 11.9,
+    image: '/products/monster-473.jpg',
+    description: 'Bebida energizante de gran formato.',
+    popular: true,
+  },
+  {
+    id: 'lays-clasicas-45',
+    name: "Lay's Clásicas",
+    brand: "Lay's",
+    category: 'snacks-salados',
+    presentation: '45 g',
+    price: 3.5,
+    image: '/products/lays-clasicas-45.png',
+    description: 'Papas fritas crocantes con el sabor original.',
+    popular: true,
+  },
+  {
+    id: 'doritos-nacho-51',
+    name: 'Doritos Nacho',
+    brand: 'Doritos',
+    category: 'snacks-salados',
+    presentation: '51 g',
+    price: 3.9,
+    image: '/products/doritos-nacho-51.png',
+    description: 'Tortillas de maíz sabor queso nacho.',
+  },
+  {
+    id: 'cheetos-bolitas-45',
+    name: 'Cheetos Bolitas',
+    brand: 'Cheetos',
+    category: 'snacks-salados',
+    presentation: '45 g',
+    price: 2.5,
+    originalPrice: 3.2,
+    image: '/products/cheetos-bolitas-45.png',
+    description: 'Snack de maíz sabor queso, crocante y ligero.',
+  },
+  {
+    id: 'pringles-original-124',
+    name: 'Pringles Original',
+    brand: 'Pringles',
+    category: 'snacks-salados',
+    presentation: '124 g',
+    price: 12.9,
+    image: '/products/pringles-original-124.png',
+    description: 'Papas en tubo, la crocantez perfecta.',
+  },
+  {
+    id: 'oreo-original-108',
+    name: 'Oreo Original',
+    brand: 'Oreo',
+    category: 'dulces-galletas',
+    presentation: '108 g',
+    price: 4.9,
+    image: '/products/oreo-original-108.png',
+    description: 'Galletas de chocolate rellenas de crema.',
+    popular: true,
+  },
+  {
+    id: 'snickers-50',
+    name: 'Snickers',
+    brand: 'Snickers',
+    category: 'dulces-galletas',
+    presentation: '50 g',
+    price: 3.5,
+    image: '/products/snickers-50.png',
+    description: 'Barra de chocolate con maní, caramelo y nougat.',
+  },
+  {
+    id: 'mms-chocolate-100',
+    name: "M&M's Chocolate",
+    brand: "M&M's",
+    category: 'dulces-galletas',
+    presentation: '100 g',
+    price: 8.9,
+    originalPrice: 10.9,
+    image: '/products/mms-chocolate-100.jpg',
+    description: 'Grageas de chocolate con cobertura crocante.',
+  },
+  {
+    id: 'toblerone-100',
+    name: 'Toblerone',
+    brand: 'Toblerone',
+    category: 'dulces-galletas',
+    presentation: '100 g',
+    price: 14.9,
+    image: '/products/toblerone-100.jpg',
+    description: 'Chocolate suizo con miel y almendras.',
+  },
+  {
+    id: 'ritz-crackers-100',
+    name: 'Ritz Crackers',
+    brand: 'Ritz',
+    category: 'dulces-galletas',
+    presentation: '100 g',
+    price: 6.5,
+    image: '/products/ritz-crackers-100.png',
+    description: 'Galletas saladas crocantes, ideales para picar.',
+  },
+  {
+    id: 'trident-menta',
+    name: 'Trident Menta',
+    brand: 'Trident',
+    category: 'dulces-galletas',
+    presentation: '14 g',
+    price: 2.5,
+    image: '/products/trident-menta.png',
+    description: 'Chicle sin azúcar sabor menta.',
+  },
+  {
+    id: 'nescafe-clasico-50',
+    name: 'Nescafé Clásico',
+    brand: 'Nescafé',
+    category: 'cafe-infusiones',
+    presentation: '50 g',
+    price: 12.9,
+    image: '/products/nescafe-clasico-50.jpg',
+    description: 'Café instantáneo, listo en segundos.',
+    popular: true,
+  },
+];
